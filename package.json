@@ -1,0 +1,50 @@
+{
+  "name": "@swaraj792725/codebase-dependency-graph",
+  "version": "1.0.0",
+  "description": "Zero-dependency JS/TS codebase module dependency graph analyzer, topological sorter, cycle detector, and token-saving AI context pruner.",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "codebase-dep-graph": "./dist/cli.cjs"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts src/cli.ts --format cjs,esm --dts --clean",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "dependency-graph",
+    "ast",
+    "ai-context",
+    "topological-sort",
+    "circular-dependency",
+    "token-savings",
+    "vibe-coding",
+    "claude",
+    "typescript",
+    "zero-dependency"
+  ],
+  "author": "Swaraj <swaraj792725@github.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/swaraj792725/codebase-dependency-graph.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "tsup": "^8.3.5",
+    "typescript": "^5.3.3",
+    "vitest": "^2.1.8"
+  }
+}
